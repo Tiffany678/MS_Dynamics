@@ -64,10 +64,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include=".Designer.gitignore" />
-    <Content Include=".gitignore">
-      <SubType>Component</SubType>
-    </Content>
+    <Content Include=".gitignore" />
     <Content Include="bin\coretools\CrmSvcUtil.exe" />
     <Content Include="bin\coretools\CrmSvcUtil.xml" />
     <Content Include="bin\coretools\Microsoft.Crm.Sdk.Proxy.dll" />
