@@ -1,0 +1,17 @@
+C:\Users\Lautin\source\repos\ConsoleApp\ConsoleApp\bin\Debug\ConsoleApp.exe.config
+C:\Users\Lautin\source\repos\ConsoleApp\ConsoleApp\bin\Debug\ConsoleApp.exe
+C:\Users\Lautin\source\repos\ConsoleApp\ConsoleApp\bin\Debug\ConsoleApp.pdb
+C:\Users\Lautin\source\repos\ConsoleApp\ConsoleApp\bin\Debug\Microsoft.Xrm.Sdk.dll
+C:\Users\Lautin\source\repos\ConsoleApp\ConsoleApp\bin\Debug\Microsoft.Xrm.Tooling.Connector.dll
+C:\Users\Lautin\source\repos\ConsoleApp\ConsoleApp\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+C:\Users\Lautin\source\repos\ConsoleApp\ConsoleApp\bin\Debug\Microsoft.Crm.Sdk.Proxy.dll
+C:\Users\Lautin\source\repos\ConsoleApp\ConsoleApp\bin\Debug\Microsoft.Rest.ClientRuntime.dll
+C:\Users\Lautin\source\repos\ConsoleApp\ConsoleApp\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.WindowsForms.dll
+C:\Users\Lautin\source\repos\ConsoleApp\ConsoleApp\bin\Debug\Microsoft.Xrm.Sdk.Deployment.dll
+C:\Users\Lautin\source\repos\ConsoleApp\ConsoleApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Lautin\source\repos\ConsoleApp\ConsoleApp\obj\Debug\ConsoleApp.csproj.AssemblyReference.cache
+C:\Users\Lautin\source\repos\ConsoleApp\ConsoleApp\obj\Debug\ConsoleApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\Lautin\source\repos\ConsoleApp\ConsoleApp\obj\Debug\ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\Lautin\source\repos\ConsoleApp\ConsoleApp\obj\Debug\ConsoleApp.csproj.CopyComplete
+C:\Users\Lautin\source\repos\ConsoleApp\ConsoleApp\obj\Debug\ConsoleApp.exe
+C:\Users\Lautin\source\repos\ConsoleApp\ConsoleApp\obj\Debug\ConsoleApp.pdb
