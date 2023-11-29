@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel.Design;
 using System.Linq;
 using System.Security.Policy;
+using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -11,7 +13,7 @@ using Microsoft.Xrm.Sdk.Client;
 using Microsoft.Xrm.Sdk.Messages;
 using Microsoft.Xrm.Sdk.Query;
 using Microsoft.Xrm.Tooling.Connector;
-using static System.Net.WebRequestMethods;
+
 
 namespace ConsoleApp
 {
@@ -24,17 +26,24 @@ namespace ConsoleApp
 
             // 47. Introduction to Service.Execute Method
             //service.Execute(OrganizationRequest)
-           /* Entity newContact = new Entity("contact");
+            /*  Entity newCake = new Entity("new_cake");
+             newCake.Attributes.Add("new_cakename", "test");
+        
+            CreateRequest req = new CreateRequest();
+               req.Target = newCake;
+               CreateResponse response = (CreateResponse)service.Execute(req);*/
+
+            /* Entity newContact = new Entity("contact");
             newContact.Attributes.Add("fullname", "Smith Yang");
             CreateRequest req = new CreateRequest();
             req.Target = newContact;
 
-            CreateResponse response = (CreateResponse)service.Execute(req);
+            CreateResponse response = (CreateResponse)service.Execute(req);*/
 
-            Console.Read();*/
+
 
             // 40. querying data using FetchXML
-            string query = @"<fetch version='1.0' output-format='xml-platform' mapping='logical' savedqueryid='00000000-0000-0000-00aa-000010001003' no-lock='false' distinct='true'>
+            /*string query = @"<fetch version='1.0' output-format='xml-platform' mapping='logical' savedqueryid='00000000-0000-0000-00aa-000010001003' no-lock='false' distinct='true'>
                       <entity name='contact'>
                           <attribute name='entityimage_url'/>
                           <attribute name='fullname'/>
@@ -48,14 +57,50 @@ namespace ConsoleApp
                               <condition attribute='statecode' operator='eq' value='0'/>
                           </filter>
                       </entity>
+                  </fetch>";*/
+
+            string query = @"<fetch version='1.0' output-format='xml-platform' mapping='logical' savedqueryid='00000000-0000-0000-00aa-000010001003' no-lock='false' distinct='true'>
+                      <entity name='new_cake'>
+                          <attribute name='new_cakeid'/>
+                          <attribute name='new_cakename'/>
+                          <attribute name='new_imageurl'/>
+          
+                          <order attribute='new_cakeid' descending='true'/>
+                          <filter type='and'>
+                              <condition attribute='ownerid' operator='eq-userid'/>
+                              <condition attribute='statecode' operator='eq' value='0'/>
+                          </filter>
+                      </entity>
                   </fetch>";
 
             EntityCollection collection = service.RetrieveMultiple(new FetchExpression(query));
 
-            foreach (Entity constact in collection.Entities)
+           /* foreach (Entity entity in collection.Entities)
             {
                 // Console.WriteLine(((AliasedValue)constact.Attributes["NumberOfcontacts"]).Value.ToString());
-                Console.WriteLine((constact.Attributes["fullname"]).ToString());
+               // Console.WriteLine((entity.Attributes["new_cakename"]).ToString());
+               if(entity.Attributes["new_cakename"].ToString() == "test")
+                {
+                    DeleteRequest deleteRequest = new DeleteRequest
+                    {
+                        Target = new EntityReference(entity.LogicalName, entity.Id)
+                    };
+
+                    // Execute the DeleteRequest
+                    service.Execute(deleteRequest);
+
+                 //   Console.WriteLine($"Record with Id {entity.Id} removed.");
+
+                }
+
+            }*/
+
+            foreach (Entity entity in collection.Entities)
+            {
+               
+                 Console.WriteLine((entity.Attributes["new_cakename"]).ToString());
+                
+
             }
             Console.Read();
 
